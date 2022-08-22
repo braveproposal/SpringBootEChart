@@ -1,0 +1,31 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /SBEChart
+
+#  1.TRACE
+#  2.DEBUG
+#  3.INFO
+#  4.WARN
+#  5.ERROR
+#  6.FATAL
+logging:
+  charset:
+    console: utf-8
+    file: utf-8
+  file:
+    name: ./logs/daily.log
+  #    path: ./logs
+  level:
+    root: INFO
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+      maxFileSize: 2MB
+      max-history: 30
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://192.168.1.236:1433;databaseName=TJMDBNew
+    username: sa
+    password: 903fjjjjj
